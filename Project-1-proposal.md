@@ -23,5 +23,5 @@ I chose a trivia game where there will be some american history questions, and e
 -if User loses, user sees a screen that says YOU LOSE
 
 ### Wireframes 
-img https://www.figma.com/file/C47nIBbAvcfm05RjP6lHvi/Untitled?t=IjSAZF98Bh0nEFk4-1
+img https://www.figma.com/community/file/1174419001862470130
 ### Anything else your instructional team should know
