@@ -8,7 +8,6 @@ startBtn.addEventListener('click', startGame)
 
 function startGame(){
    correctBtn.addEventListener('click', increaseScore) || wrongBtn.addEventListener('click', wrongMessage)
-    //wrongBtn.addEventListener('click', wrongMessage)
 // startBtn would start the timer for each questions but still need to add timer
 }
 function wrongMessage(){
