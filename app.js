@@ -1,15 +1,25 @@
-const startBtn = document.querySelector('#startButton')
-const scoreStat = document.querySelector('#score')
-const wrongBtn = document.querySelector('.wrongAnswer')
-const correctBtn = document.querySelector('.correctAnswer')
+const startBtn = document.querySelector('#startButton');
+const scoreStat = document.querySelector('#score');
+
+const wrongBtn = document.querySelectorAll('.wrongAnswer');
+wrongBtn.forEach(wrongAnswer => {
+    wrongAnswer.addEventListener('click', wrongMessage);
+});
+
+const correctBtn = document.querySelectorAll('.correctAnswer');
+correctBtn.forEach(correctAnswer => {
+    correctAnswer.addEventListener('click', increaseScore)
+})
 
 startBtn.addEventListener('click', startGame)
-
-
 function startGame(){
-   correctBtn.addEventListener('click', increaseScore) || wrongBtn.addEventListener('click', wrongMessage)
-// startBtn would start the timer for each questions but still need to add timer
+    if (correctBtn){
+    }
+    if (wrongBtn){
+    }
+    // add timer
 }
+
 function wrongMessage(){
     alert('WRONGGGG')
 }
