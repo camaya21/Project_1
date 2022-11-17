@@ -1,10 +1,11 @@
-const startBtn = document.querySelector('#startButton');
+const startBtn = document.querySelector('.startButton');
 const scoreStat = document.querySelector('#score');
 const countDown = document.querySelector('#countDown');
+const questionContainer = document.getElementById('question-container')
 
 const wrongBtn = document.querySelectorAll('.wrongAnswer');
 wrongBtn.forEach(wrongAnswer => {
-    wrongAnswer.addEventListener('click', wrongMessage,);
+    wrongAnswer.addEventListener('click', wrongMessage);
 });
 
 const correctBtn = document.querySelectorAll('.correctAnswer');
@@ -12,8 +13,14 @@ correctBtn.forEach(correctAnswer => {
     correctAnswer.addEventListener('click', increaseScore);
 });
 
-startBtn.addEventListener('click', startGame)
+startBtn.addEventListener('click', startGame);
+function beginning() {
+    startBtn.classList.add('hide');
+    questionContainer.classList.remove('hide')
+}
+
 function startGame(){
+    beginning();
     interval= setInterval(timer, 1000);
     correctBtn || wrongBtn;
 }

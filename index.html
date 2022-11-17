@@ -9,11 +9,13 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Are You Smarter Than a 5th Grader?</h1>
-    <input type="button" value="START" id="startButton">
-    <div id="countDown">5</div>
-    <div id="score">0</div>
-    <section class="Questions">
+    <div class="controls">
+        <h1>Are You Smarter Than a 5th Grader?</h1>
+        <input type="button" value="START" class="startButton">
+    </div>
+    <section id="question-container" class="hide">
+        <div id="countDown">30</div>
+        <div id="score">0</div>
         <div class="q1">
             <h3>Question 1. Why do you often see lightning before you hear Thunder?</h3>
                 <div>
@@ -34,11 +36,11 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="q2">
-            <h3>Question 2. Put your question</h3>
+        <div class="q2">
+            <h3>Question 2. Who is the author of the 1960 novel about a social and racial inequality, To kill a Mockingbird?</h3>
                 <div>
                     <button class="correctAnswer"></button>
-                    <p>This is a correct answer</p>
+                    <p>Harper Lee</p>
                 </div>
                 <div>
                     <button class="wrongAnswer"></button>
@@ -55,7 +57,7 @@
             </div>
         </div>
         <div class="q3">
-            <h3>Question 3. Put your question</h3>
+            <h3>Question 3. What're the three types of rock?</h3>
             <div class="answers">
                 <div>
                     <button class="wrongAnswer"></button>
@@ -71,16 +73,16 @@
                 </div>
                 <div>
                     <button class="correctAnswer"></button>
-                    <p>This is a correct answer</p>
+                    <p>Sedimentary. Metamorphic, and Igneous</p>
                 </div>
             </div>
         </div>
         <div class="q4">
-            <h3>Question 4. Put your question</h3>
+            <h3>Question 4. What's the largest and deepest ocean in the world?</h3>
             <div class="answers">
                 <div>
                     <button class="correctAnswer"></button>
-                    <p>This is a correct answer</p>
+                    <p>Pacific Ocean</p>
                 </div>
                 <div>
                     <button class="wrongAnswer"></button>
@@ -97,7 +99,7 @@
             </div>
         </div>
         <div class="q5">
-            <h3>Question 5. Put your question</h3>
+            <h3>Question 5. In a class field trip, there are four busses taking 36 students to the zoo. Each bus carries the same number of students. How many students are on each bus?</h3>
             <div class="answers">
                 <div>
                     <button class="wrongAnswer"></button>
@@ -105,7 +107,7 @@
                 </div>
                 <div>
                     <button class="correctAnswer"></button>
-                    <p>This is a correct answer</p>
+                    <p>Nine</p>
                 </div>
                 <div>
                     <button class="wrongAnswer"></button>
@@ -118,7 +120,7 @@
             </div>
         </div>
         <div class="q6">
-            <h3>Question 6. Put your question</h3>
+            <h3>Question 6. If a shopping cart contains one apple, two bananas, three oranges, and four hot dogs, what percentage of the cart's total contents is fruit?</h3>
             <div class="answers">
                 <div>
                     <button class="wrongAnswer"></button>
@@ -134,7 +136,7 @@
                 </div>
                 <div>
                     <button class="correctAnswer"></button>
-                    <p>This is a correct answer</p>
+                    <p>60%</p>
                 </div>
             </div>
         </div>
@@ -224,4 +226,4 @@
         </div> -->
     </section>
 </body>
-</html> -->
+</html>
