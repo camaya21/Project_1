@@ -5,69 +5,92 @@ const questionContainer = document.getElementById('question-container')
 
 const q1 = document.getElementById('q1')
 const q2 = document.getElementById('q2')
-const q3 = document.getElementById('.q3')
-const q4 = document.getElementById('.q4')
-// const q5 = document.querySelector('.q5')
-// const q6 = document.querySelector('.q6')
-// const q7 = document.querySelector('.q7')
-// const q8 = document.querySelector('.q8')
-// const q9 = document.querySelector('.q9')
-// const q10 = document.querySelector('.q10') q3, q4, q5, q6, q7, q8, q9, q10
+const q3 = document.getElementById('q3')
+const q4 = document.getElementById('q4')
+const q5 = document.getElementById('q5')
+const q6 = document.getElementById('q6')
+const q7 = document.getElementById('q7')
+const q8 = document.getElementById('q8')
+const q9 = document.getElementById('q9')
+const q10 = document.getElementById('q10')
 
-let myArray = [q1, q2, q3, q4];
+const source = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+let random = []
 let i = 0
 
-const wrongBtn = document.querySelectorAll('.wrongAnswer');
-wrongBtn.forEach(wrongAnswer => {
-    wrongAnswer.addEventListener('click', wrongMessage);
-});
+const getRanQues = () => {
+let copy = source.slice()
+while(copy.length){
+    let ranPosition = Math.floor(Math.random()*copy.length)
+    let question = copy.splice(ranPosition,1)[0]
+    random.push(question);
+}
+// return random
+
+}
+getRanQues(source);
+console.log(random[0].classList);
 
 const correctBtn = document.querySelectorAll('.correctAnswer');
-correctBtn.forEach(correctAnswer => {
-    correctAnswer.addEventListener('click', increaseScore);
-});
+const wrongBtn = document.querySelectorAll('.wrongAnswer');
 
+    correctBtn.forEach(correctAnswer => {
+        correctAnswer.addEventListener('click', increaseScore);
+    });
+    wrongBtn.forEach(wrongAnswer => {
+        wrongAnswer.addEventListener('click', wrongMessage);
+    });
+    
 startBtn.addEventListener('click', startGame);
 function beginning() {
     startBtn.classList.add('hide');
-    myArray[i].classList.remove('hide')
-    i+=1
+    random[i].classList.remove('hide');
 }
-
+    
 function startGame(){
     beginning();
-    interval= setInterval(timer, 1000);
-    correctBtn || wrongBtn
+    //interval= setInterval(timer, 1000);
 }
 
 function wrongMessage(){
     alert('WRONGGGG');
-    resetGame()
+    clearInterval(interval);
+    hideRemove(i);
+    i++
 }
 
 function increaseScore() {
     scoreStat.textContent =  Number(scoreStat.textContent)+1
-    if (scoreStat.textContent == 1) {
+    if (scoreStat.textContent <=10) {
         alert('YOU WIN');
-        resetGame()
     }
+    clearInterval(interval);
+    hideRemove(i);
+    i++
+}
+function hideRemove(i){
+    random[i].classList.add('hide');
+   random[i+1].classList.remove('hide');
+    timer();
+    interval= setInterval(timer, 1000);
+    console.log(i);
 }
 
 function timer() {
     countDown.textContent = Number(countDown.textContent)-1
     if (countDown.textContent == 0){
-        resetGame();
+        clearInterval(interval);
         return alert('You LOSE! You took too long');
     }
 }
 
-function resetGame() {
-    startBtn.removeEventListener('click', startGame);
-    clearInterval(interval);
-    wrongBtn.forEach(wrongAnswer => {
-        wrongAnswer.removeEventListener('click', wrongMessage,);
-    });
-    correctBtn.forEach(correctAnswer => {
-        correctAnswer.removeEventListener('click', increaseScore);
-    });
-}
+// function removeListener() {
+//     //startBtn.removeEventListener('click', startGame);
+//     clearInterval(interval);
+//     wrongBtn.forEach(wrongAnswer => {
+//         wrongAnswer.removeEventListener('click', wrongMessage,);
+//     });
+//     correctBtn.forEach(correctAnswer => {
+//         correctAnswer.removeEventListener('click', increaseScore);
+//     });
+// }
