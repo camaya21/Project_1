@@ -25,7 +25,6 @@ while(copy.length){
     let question = copy.splice(ranPosition,1)[0]
     random.push(question);
 }
-// return random
 
 }
 getRanQues(source);
@@ -49,7 +48,7 @@ function beginning() {
     
 function startGame(){
     beginning();
-    //interval= setInterval(timer, 1000);
+    interval= setInterval(timer, 1000);
 }
 
 function wrongMessage(){
@@ -71,7 +70,7 @@ function increaseScore() {
 function hideRemove(i){
     random[i].classList.add('hide');
    random[i+1].classList.remove('hide');
-    timer();
+    countDown.textContent = 5
     interval= setInterval(timer, 1000);
     console.log(i);
 }
@@ -80,7 +79,9 @@ function timer() {
     countDown.textContent = Number(countDown.textContent)-1
     if (countDown.textContent == 0){
         clearInterval(interval);
-        return alert('You LOSE! You took too long');
+        alert('You LOSE! You took too long');
+        hideRemove(i);
+        i++
     }
 }
 
