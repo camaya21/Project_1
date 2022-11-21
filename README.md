@@ -13,12 +13,16 @@ Getting Started
 - Deployed Link https://camaya21.github.io/Project_1/
 - Press the start button to begin!
 
+ScreenShots
+In assets Directory
+
 Next Steps
 - Center all the answers
 - Instaed of rounded messages, add different animations in an array so when an answer is correct, it can pick out a random correct animation. Same thing with wrong answers
 - Add sound to every click
 - Change fonts
 - Add more sets of questions to choose from
+- Fix background image
 
 COMMITS
 - Commits on Nov 21, 2022

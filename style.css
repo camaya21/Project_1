@@ -2,7 +2,7 @@ body {
     background-image: url(https://static.vecteezy.com/system/resources/previews/000/534/317/non_2x/blank-green-chalkboard-vector-illustration.jpg);
     /* background-position: center; */
     background-size: 1400px ;
-    background-position: bottom 40px;
+    background-position: bottom 30px;
 }   
 
 .controls {
@@ -33,7 +33,7 @@ body {
 h3 {
     text-align: center;
     position:relative;
-    font-size: 18px;
+    font-size: 30px;
 }
 
 #wrongAlert {
