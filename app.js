@@ -1,4 +1,5 @@
 const startBtn = document.querySelector('.startButton');
+const basicNum = document.getElementById('basicNum')
 const scoreStat = document.querySelector('#score');
 const countDown = document.querySelector('#countDown');
 const questionContainer = document.getElementById('question-container')
@@ -19,20 +20,19 @@ let random = []
 let i = 0
 
 const getRanQues = () => {
-let copy = source.slice()
-while(copy.length){
-    let ranPosition = Math.floor(Math.random()*copy.length)
-    let question = copy.splice(ranPosition,1)[0]
-    random.push(question);
+    let copy = source.slice()
+    while(copy.length){
+        let ranPosition = Math.floor(Math.random()*copy.length)
+        let question = copy.splice(ranPosition,1)[0]
+        random.push(question);
+    }
 }
-
-}
-getRanQues(source);
-console.log(random[0].classList);
-
-const correctBtn = document.querySelectorAll('.correctAnswer');
-const wrongBtn = document.querySelectorAll('.wrongAnswer');
-
+    getRanQues(source);
+    console.log(random[0].classList);
+    
+    const correctBtn = document.querySelectorAll('.correctAnswer');
+    const wrongBtn = document.querySelectorAll('.wrongAnswer');
+    
     correctBtn.forEach(correctAnswer => {
         correctAnswer.addEventListener('click', increaseScore);
     });
@@ -40,51 +40,55 @@ const wrongBtn = document.querySelectorAll('.wrongAnswer');
         wrongAnswer.addEventListener('click', wrongMessage);
     });
     
-startBtn.addEventListener('click', startGame);
-function beginning() {
-    startBtn.classList.add('hide');
-    random[i].classList.remove('hide');
-}
-    
-function startGame(){
-    beginning();
-    interval= setInterval(timer, 1000);
-}
-
-function wrongMessage(){
-    alert('WRONGGGG');
-    clearInterval(interval);
-    hideRemove(i);
-    i++
-}
-
-function increaseScore() {
-    scoreStat.textContent =  Number(scoreStat.textContent)+1
-    if (scoreStat.textContent <=10) {
-        alert('YOU WIN');
+    startBtn.addEventListener('click', startGame);
+    function beginning() {
+        startBtn.classList.add('hide');
+        basicNum.classList.remove('hide');
+        random[i].classList.remove('hide');
     }
-    clearInterval(interval);
-    hideRemove(i);
-    i++
-}
-function hideRemove(i){
-    random[i].classList.add('hide');
-   random[i+1].classList.remove('hide');
-    countDown.textContent = 5
-    interval= setInterval(timer, 1000);
-    console.log(i);
-}
-
-function timer() {
-    countDown.textContent = Number(countDown.textContent)-1
-    if (countDown.textContent == 0){
+    
+    function startGame(){
+        beginning();
+        interval= setInterval(timer, 1000);
+    }
+    
+    function wrongMessage(){
+        alert('WRONGGGG');
         clearInterval(interval);
-        alert('You LOSE! You took too long');
         hideRemove(i);
         i++
     }
-}
-
+    
+    function increaseScore() {
+        scoreStat.textContent =  Number(scoreStat.textContent)+1
+        if (scoreStat.textContent <=10) {
+            alert('GOODJOB');
+        }
+        clearInterval(interval);
+        hideRemove(i);
+        i++
+    }
+    function hideRemove(i){
+        random[i].classList.add('hide');
+        random[i+1].classList.remove('hide');
+        countDown.textContent = 5
+        interval= setInterval(timer, 1000);
+        console.log(i);
+        if (random[i]===random[9]) return
+    }
+    
+    console.log(random[9])
+    function timer() {
+        countDown.textContent = Number(countDown.textContent)-1
+        if (countDown.textContent == 0){
+            clearInterval(interval);
+            alert('You LOSE! You took too long');
+            hideRemove(i);
+            i++
+        }
+    }
+    
+    //scoreEnd.textContent = scoreStat.textContent
 // function removeListener() {
 //     //startBtn.removeEventListener('click', startGame);
 //     clearInterval(interval);
