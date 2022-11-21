@@ -5,3 +5,48 @@
 .hide {
     display: none;
 }
+
+.wrongAnswer {
+    margin: 25px 25px 25px 100px; 
+    
+}
+.correctAnswer {
+    margin: 25px 25px 25px 100px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#alert {
+    background: #F62817;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    border-radius: 4px;
+    border-left: 8px solid #B21807;
+}
+/* .alert .fa-exclamation-circle {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 30px;
+} */
+
+#alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#alert .close-button {
+    position: absolute;
+    right: 50px;
+    top: 2px;
+    background: #B21807;
+    padding: 18px;
+}
