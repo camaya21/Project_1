@@ -1,52 +1,92 @@
 .controls {
     text-align: center;
 }
+.controls h1 {
+    font-size: 40px;
+}
+.controls .startButton{
+    font-size: 35px;
+    margin-top: 250px;
+    background-color: #00BFFF;
+}
 
 .hide {
     display: none;
 }
 
 .wrongAnswer {
-    margin: 25px 25px 25px 100px; 
-    
+    padding: 10px 100px;
+    margin: 15px 555px;
 }
 .correctAnswer {
-    margin: 25px 25px 25px 100px;
-    text-align: center;
+    padding: 10px 100px;
+    margin: 15px 555px;
 }
 
 h3 {
     text-align: center;
-}
-
-#alert {
-    background: #F62817;
-    padding: 20px 40px;
-    min-width: 420px;
-    position: absolute;
-    right: 0px;
-    top: 10px;
-    border-radius: 4px;
-    border-left: 8px solid #B21807;
-}
-/* .alert .fa-exclamation-circle {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: black;
-    font-size: 30px;
-} */
-
-#alert .msg {
-    padding: 0 20px;
+    position:relative;
     font-size: 18px;
 }
 
-#alert .close-button {
-    position: absolute;
-    right: 50px;
-    top: 2px;
-    background: #B21807;
-    padding: 18px;
+#wrongAlert {
+    text-align: center;
+    background: #F62817;
+    padding: 20px 5px;
+    margin: 20px 400px;
+    border-radius: 10px;
+}
+
+#wrongAlert .msg {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#correctAlert {
+    text-align: center;
+    background: #0BDA51;
+    padding: 20px 5px;
+    margin: 20px 400px;
+    border-radius: 10px;
+}
+
+#correctAlert .msg {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#endAlertWin {
+    text-align: center;
+    background:  #00BFFF;
+    padding: 20px 5px;
+    margin: 20px 400px;
+    border-radius: 10px;
+}
+
+#endAlertWin .msg {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#endAlertLose {
+    text-align: center;
+    background: #F62817;
+    padding: 20px 5px;
+    margin: 20px 400px;
+    border-radius: 10px;
+}
+
+#endAlertLose .msg {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+#basicNum {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+#basicNum .top {
+    font-size: 18px;
+    font-weight: 400;
 }

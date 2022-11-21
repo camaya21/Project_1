@@ -11,190 +11,195 @@
 <body>
     <div class="controls">
         <h1>Are You Smarter Than a 5th Grader?</h1>
-        <input type="button" value="START" class="startButton">
+        <button class="startButton">START</button>
+    </div>
+    <div id="basicNum" class="hide">
+        <p class="top">Timer</p>
+        <div id="countDown">20</div>
+        <p class="top">Score</p>
+        <div id="score">0</div>
+    </div>
+    <div id="endAlertWin" class="hide">
+        <span class="msg">You are smarter than a 5th grader!</span>
+    </div>
+    <div id="endAlertLose" class="hide">
+        <span class="msg">You are NOT smarter than a 5th grader!</span>
     </div>
     <section id="question-container">
-        <div id="basicNum" class="hide">
-            <div id="countDown">20</div>
-            <div id="score">0</div>
-        </div>
-        <div id="alert" class="hide">
-        <!-- <span class="fas fa-exclamation-circle"></span> -->
-        <!-- <i class='fas fa-exclamation-circle'></i> -->
-            <span class="msg">WRONG ANSWER</span>
-            <!-- <span class="close-btn"> -->
-                <button class="close-button" type="button">X</button>
-                <span class="fas fa-times"></span>
-            </span>
-        </div>
         <div id="q1" class="hide">
             <h3>Why do you often see lightning before you hear Thunder?</h3>
-                <div>
-                    <button class="wrongAnswer">The louder the thunder, the closer you are to lightning</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">It takes approximately 8 seconds for light to travel 1 mile</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Light travels faster than sound</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Lighting is created when thunder passes through the air</button>
-                </div>
+            <div>
+                <button class="wrongAnswer">The louder the thunder, the closer you are to lightning</button>
+            </div>
+            <div>
+                <button class="wrongAnswer">It takes approximately 8 seconds for light to travel 1 mile</button>
+            </div>
+            <div>
+                <button class="correctAnswer">Light travels faster than sound</button>
+            </div>
+            <div>
+                <button class="wrongAnswer">Lighting is created when thunder passes through the air</button>
             </div>
         </div>
-        <div id="q2" class="hide">
-            <h3>Who is the author of the 1960 novel about a social and racial inequality, To kill a Mockingbird?</h3>
-                <div>
-                    <button class="correctAnswer">Harper Lee</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Henry James</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Charles Dickens></button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Ernest Hemingway</button>
-                </div>
-            </div>
+    </div>
+    <div id="q2" class="hide">
+        <h3>Who is the author of the 1960 novel about a social and racial inequality, To kill a Mockingbird?</h3>
+        <div>
+            <button class="correctAnswer">Harper Lee</button>
         </div>
-        <div id="q3" class="hide">
-            <h3>What're the three types of rock?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">Sandstone, Granite, Chalk</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Limestone, Igneous, Metamorphosis</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Sedimentary, Ignite, Metamorphosis   </button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Sedimentary. Metamorphic, and Igneous</button>
-                </div>
-            </div>
+        <div>
+            <button class="wrongAnswer">Henry James</button>
         </div>
-        <div id="q4" class="hide">
-            <h3>What's the largest and deepest ocean in the world?</h3>
-            <div class="answers">
-                <div>
-                    <button class="correctAnswer">Pacific Ocean</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Atlantic Ocean</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">The Great Lakes</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Antarctic Ocean</button>
-                </div>
-            </div>
+        <div>
+            <button class="wrongAnswer">Charles Dickens></button>
         </div>
-        <div id="q5" class="hide">
-            <h3>In a class field trip, there are four busses taking 36 students to the zoo. Each bus carries the same number of students. How many students are on each bus?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">six</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Nine</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Ten</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Math is hard :(</button>
-                </div>
-            </div>
+        <div>
+            <button class="wrongAnswer">Ernest Hemingway</button>
         </div>
-        <div id="q6" class="hide">
-            <h3>If a shopping cart contains one apple, two bananas, three oranges, and four hot dogs, what percentage of the cart's total contents is fruit?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">93%</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">50%</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">33.3%</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">60%</button>
-                </div>
-            </div>
+    </div>
+</div>
+<div id="q3" class="hide">
+    <h3>What're the three types of rock?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">Sandstone, Granite, Chalk</button>
         </div>
-        <div id="q7" class="hide">
-            <h3>The first atomic bomb attack was on which city?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">Hiratsuka</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Hiroshima</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Matsuyama</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Nagasaki</button>
-                </div>
-            </div>
+        <div>
+            <button class="wrongAnswer">Limestone, Igneous, Metamorphosis</button>
         </div>
-        <div id="q8" class="hide">
-            <h3>Who, along with Neil Armstrong, first landed on the moon?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">Galileo Galilei</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Chris Hadfield</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Edwin Buzz Aldrin</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Judith Resnik</button>
-                </div>
-            </div>
+        <div>
+            <button class="wrongAnswer">Sedimentary, Ignite, Metamorphosis   </button>
         </div>
-        <div id="q9" class="hide">
-            <h3>What animal was the first to go to space?</h3>
-            <div class="answers">
-                <div>
-                    <button class="correctAnswer">Dog</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Chimpanzee</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Cat</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Bunny</button>
-                </div>
-            </div>
+        <div>
+            <button class="correctAnswer">Sedimentary. Metamorphic, and Igneous</button>
         </div>
-        <div id="q10" class="hide">
-            <h3>How many hearts does an octopus have?</h3>
-            <div class="answers">
-                <div>
-                    <button class="wrongAnswer">Two</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">One DUH</button>
-                </div>
-                <div>
-                    <button class="wrongAnswer">Eight</button>
-                </div>
-                <div>
-                    <button class="correctAnswer">Three</button>
-                </div>
-            </div>
+    </div>
+</div>
+<div id="q4" class="hide">
+    <h3>What's the largest and deepest ocean in the world?</h3>
+    <div class="answers">
+        <div>
+            <button class="correctAnswer">Pacific Ocean</button>
         </div>
-    </section>
+        <div>
+            <button class="wrongAnswer">Atlantic Ocean</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">The Great Lakes</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Antarctic Ocean</button>
+        </div>
+    </div>
+</div>
+<div id="q5" class="hide">
+    <h3>In a class field trip, there are four busses taking 36 students to the zoo. Each bus carries the same number of students. How many students are on each bus?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">six</button>
+        </div>
+        <div>
+            <button class="correctAnswer">Nine</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Ten</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Math is hard :(</button>
+        </div>
+    </div>
+</div>
+<div id="q6" class="hide">
+    <h3>If a shopping cart contains one apple, two bananas, three oranges, and four hot dogs, what percentage of the cart's total contents is fruit?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">93%</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">50%</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">33.3%</button>
+        </div>
+        <div>
+            <button class="correctAnswer">60%</button>
+        </div>
+    </div>
+</div>
+<div id="q7" class="hide">
+    <h3>The first atomic bomb attack was on which city?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">Hiratsuka</button>
+        </div>
+        <div>
+            <button class="correctAnswer">Hiroshima</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Matsuyama</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Nagasaki</button>
+        </div>
+    </div>
+</div>
+<div id="q8" class="hide">
+    <h3>Who, along with Neil Armstrong, first landed on the moon?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">Galileo Galilei</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Chris Hadfield</button>
+        </div>
+        <div>
+            <button class="correctAnswer">Edwin Buzz Aldrin</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Judith Resnik</button>
+        </div>
+    </div>
+</div>
+<div id="q9" class="hide">
+    <h3>What animal was the first to go to space?</h3>
+    <div class="answers">
+        <div>
+            <button class="correctAnswer">Dog</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Chimpanzee</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Cat</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Bunny</button>
+        </div>
+    </div>
+</div>
+<div id="q10" class="hide">
+    <h3>How many hearts does an octopus have?</h3>
+    <div class="answers">
+        <div>
+            <button class="wrongAnswer">Two</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">One DUH</button>
+        </div>
+        <div>
+            <button class="wrongAnswer">Eight</button>
+        </div>
+        <div>
+            <button class="correctAnswer">Three</button>
+        </div>
+    </div>
+</div>
+</section>
+<div id="wrongAlert" class="hide">
+    <span class="msg">WRONG ANSWER</span>
+</div>
+<div id="correctAlert" class="hide">
+    <span class="msg">CORRECT ANSWER</span>
+</div>
 </body>
 </html>

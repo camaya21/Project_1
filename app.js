@@ -3,7 +3,10 @@ const basicNum = document.getElementById('basicNum')
 const scoreStat = document.querySelector('#score');
 const countDown = document.querySelector('#countDown');
 const questionContainer = document.getElementById('question-container')
-const wrongAlert = document.getElementById('alert')
+const wrongAlert = document.getElementById('wrongAlert')
+const correctAlert = document.getElementById('correctAlert')
+const endAlertWin = document.getElementById('endAlertWin')
+const endAlertLose = document.getElementById('endAlertLose')
 const q1 = document.getElementById('q1')
 const q2 = document.getElementById('q2')
 const q3 = document.getElementById('q3')
@@ -30,7 +33,6 @@ const getRanQues = () => {
 getRanQues(source);
 console.log(random[0].classList);
 
-// const closeBtn = document.querySelector('.close-button')
 const correctBtn = document.querySelectorAll('.correctAnswer');
 const wrongBtn = document.querySelectorAll('.wrongAnswer');
 function addlisteners() {
@@ -54,43 +56,27 @@ function startGame(){
     beginning();
     interval= setInterval(timer, 1000);
 }
-
-// closeBtn.forEach(wrongAnswer => {
-//     wrongAnswer.addEventListener('click', wrongAlert.classList.add('hide'))
-// })
-function wrongMessage(){
-    // alert('WRONGGGG');
-    removeListener();
-    wrongAlert.classList.remove('hide')
-    myTimeout = setTimeout(hideMessage, 5000)
-    //     setTimeout(hideMessage(), 5000)
-    //     // hideRemove(i);
-    //     // i++
-}
-    
 function hideMessage(){
-    wrongAlert.classList.add('hide')
+    wrongAlert.classList.add('hide') || correctAlert.classList.add('hide')
     addlisteners();
     hideRemove(i);
     i++
 }
 
+function wrongMessage(){
+    removeListener();
+    wrongAlert.classList.remove('hide')
+    myTimeout = setTimeout(hideMessage, 1500)
+}
+
 function increaseScore() {
     scoreStat.textContent =  Number(scoreStat.textContent)+1
     if (scoreStat.textContent <=10) {
-        alert('CORRECT')
+        removeListener();
+        correctAlert.classList.remove('hide')
+        myTimeout = setTimeout(hideMessage, 1500)
     }
-    hideRemove(i);
-    i++
 }
-// function hideRemove(i){
-//     random[i].classList.add('hide');
-//     random[i+1].classList.remove('hide');
-//     countDown.textContent = 5
-//     interval= setInterval(timer, 1000);
-//     console.log(i);
-//     if (random[i]===random[9]) return
-// }
     
 function hideRemove(i) {
     addlisteners();
@@ -103,8 +89,12 @@ function hideRemove(i) {
       console.log(i);
       
     }else {
-      console.log('game over')
-      alert('gameOver')
+        if (scoreStat.textContent <=5) {
+            endAlertLose.classList.remove('hide');
+        }
+        if(scoreStat.textContent >=6) {
+            endAlertWin.classList.remove('hide');
+        }
     }
 }
 
@@ -119,9 +109,7 @@ function timer() {
     }
 }
     
-    //scoreEnd.textContent = scoreStat.textContent
 function removeListener() {
-    //startBtn.removeEventListener('click', startGame);
     clearInterval(interval);
     wrongBtn.forEach(wrongAnswer => {
         wrongAnswer.removeEventListener('click', wrongMessage,);
