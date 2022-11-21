@@ -7,6 +7,7 @@ const wrongAlert = document.getElementById('wrongAlert')
 const correctAlert = document.getElementById('correctAlert')
 const endAlertWin = document.getElementById('endAlertWin')
 const endAlertLose = document.getElementById('endAlertLose')
+const timerAlert = document.getElementById('timerAlert')
 const q1 = document.getElementById('q1')
 const q2 = document.getElementById('q2')
 const q3 = document.getElementById('q3')
@@ -57,7 +58,7 @@ function startGame(){
     interval= setInterval(timer, 1000);
 }
 function hideMessage(){
-    wrongAlert.classList.add('hide') || correctAlert.classList.add('hide')
+    wrongAlert.classList.add('hide') || correctAlert.classList.add('hide') || timerAlert.classList.add('hide')
     addlisteners();
     hideRemove(i);
     i++
@@ -102,10 +103,9 @@ console.log(random[9])
 function timer() {
     countDown.textContent = Number(countDown.textContent)-1
     if (countDown.textContent == 0){
-        clearInterval(interval);
-        alert('You LOSE! You took too long');
-        hideRemove(i);
-        i++
+        removeListener();
+        timerAlert.classList.remove('hide')
+        myTimeout = setTimeout(hideMessage, 1500)
     }
 }
     

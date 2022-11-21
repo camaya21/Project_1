@@ -81,6 +81,19 @@ h3 {
     font-size: 20px;
 }
 
+#timerAlert {
+    text-align: center;
+    background: #FFFF66;
+    padding: 20px 5px;
+    margin: 20px 400px;
+    border-radius: 10px;
+}
+
+#timerAlert .msg {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
 #basicNum {
     font-weight: bolder;
     font-size: 30px;
